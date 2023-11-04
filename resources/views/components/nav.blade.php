@@ -21,6 +21,7 @@
   }
 
 
+
 </style>
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
@@ -40,7 +41,7 @@
           <a class="text-white nav-link" href="#">Sign In</a>
         </li>
         <li class="nav-item">
-          <a class="text-white nav-link" href="#">Add Products</a>
+          <a class="text-white nav-link" href="{{route('add')}}">Add Products</a>
         </li>
         <li class="nav-item">
           <a class="text-white nav-link" href="#">Add Categories</a>

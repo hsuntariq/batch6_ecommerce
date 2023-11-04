@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +23,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::view('/','welcome');
-Route::view('/add-product','pages.admin.add-product');
+Route::view('/add-product','pages.admin.add-product')->name('add');
+Route::post('/insert-product',[productController::class,'insertProduct']);
