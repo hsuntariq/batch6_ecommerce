@@ -1,4 +1,4 @@
-<div id="carouselExample" class="carousel slide">
+<div id="carouselExample" class="carousel slide" style="margin-bottom: -20rem">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img width="100%" src="https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg" class="d-block w-100" alt="...">

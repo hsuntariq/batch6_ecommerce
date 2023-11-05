@@ -24,4 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/','welcome');
 Route::view('/add-product','pages.admin.add-product')->name('add');
+Route::view('/single/{id}','pages.user.single-product');
 Route::post('/insert-product',[productController::class,'insertProduct']);
+Route::get('/',[productController::class,'getProducts']);
+Route::get('/single/{id}',[productController::class,'findProduct']);
