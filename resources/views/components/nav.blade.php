@@ -42,7 +42,7 @@
           <a class="text-white nav-link" href="#">Sign In</a>
         </li>
         <li class="nav-item">
-          <a class="text-white nav-link" href="{{route('add')}}">Add Products</a>
+          <a class="text-white nav-link" href="">Add Products</a>
         </li>
         <li class="nav-item">
           <a class="text-white nav-link" href="#">Add Categories</a>

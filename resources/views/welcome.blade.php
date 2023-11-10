@@ -20,4 +20,20 @@
 
         {{$products->links("pagination::bootstrap-5")}}
     </div>
+
+
+    <div class="row m-auto container">
+        @foreach ($categories as $item)
+            <div class="col-lg-3">
+                <div class="card p-3 my-2 text-capitalize">
+                    <img width="100%" height="350px" style="object-fit: cover" src="{{asset('storage/' . $item->image)}}" alt="">
+                    <h4>Name:{{$item->name}}</h4>
+                </div>
+            </div>
+            @endforeach
+            <div class="my-3">
+                {{$categories->links("pagination::bootstrap-5")}}
+            </div>
+    </div>
+
 </x-layout>

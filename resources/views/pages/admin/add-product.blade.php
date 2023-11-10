@@ -31,10 +31,12 @@
                 @enderror
                 <label for="">Category</label>
                 <select class="form-control" name="category" id="">
-                    <option value="gaming">Gaming</option>
-                    <option value="makeup">Makeup</option>
-                    <option value="books">Books</option>
-                    <option value="clothing">Clothing</option>
+                    @foreach ($categories as $item)
+                    <option value="gaming">
+                        {{$item->name}}
+                    </option>
+                    @endforeach
+                    
 
                 </select>
                 @error('category')

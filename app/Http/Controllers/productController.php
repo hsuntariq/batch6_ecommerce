@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -28,9 +29,11 @@ class productController extends Controller
 
     public function getProducts(){
         // get the data from the products table
-        $products = Product::paginate(8);
+        $products = Product::paginate(4);
+        // get the categories
+        $categories = Category::paginate(4);
         // after getting the data, return to the welcome page
-        return view('welcome',compact('products'));
+        return view('welcome',compact('products','categories'));
     }
 
     public function findProduct($id){

@@ -16,11 +16,11 @@
         <div class="icon"><i class="me-3 bi bi-house"></i></div>
         <div class="text">Home</div>
     </a>
-    <a href="" class="fs-2 d-flex nav-link">
+    <a href="/add-product" class="fs-2 d-flex nav-link">
         <div class="icon"><i class="me-3 bi bi-bag-plus"></i></div>
         <div class="text">Add Product</div>
     </a>
-    <a href="" class="fs-2 d-flex nav-link">
+    <a href="/add-category" class="fs-2 d-flex nav-link">
         <div class="icon"><i class="me-3 bi bi-bookmark-star"></i></div>
         <div class="text">Add Category</div>
     </a>
