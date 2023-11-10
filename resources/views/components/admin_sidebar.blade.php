@@ -36,4 +36,17 @@
         <div class="icon"><i class="me-3 bi bi-pencil-square"></i></div>
         <div class="text">Update Order</div>
     </a>
+    
+    <div class="dropdown">
+        <div class="dropdown-toggle fs-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="icon"><i class="bi bi-graph-up"></i></span>
+            <span class="text">Analytics</span>
+        </div>
+        <ul class="dropdown-menu ms-5">
+          <li><a class="dropdown-item" href="#">User Analytics</a></li>
+          <li><a class="dropdown-item" href="/product-analytics">Product Analytics</a></li>
+          <li><a class="dropdown-item" href="#">Category Analytics</a></li>
+        </ul>
+      </div>
+
 </div>

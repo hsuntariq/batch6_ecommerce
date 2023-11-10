@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\productChart;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -39,6 +40,24 @@ class productController extends Controller
     public function findProduct($id){
         $item = Product::find($id);
         return view('pages.user.single-product',compact('item'));
+    }
+
+
+    public function productGraph(){
+        $product = Product::all();
+        $chart = new productChart;
+        $chart->labels($product->pluck('name'));
+        $chart->dataset('Products','bar',$product->pluck('price'));
+        $chart2 = new productChart;
+        $chart2->labels($product->pluck('name'));
+        $chart2->dataset('Products','line',$product->pluck('price'));
+        $chart3 = new productChart;
+        $chart3->labels($product->pluck('name'));
+        $chart3->dataset('Products','pie',$product->pluck('price'));
+        $chart4 = new productChart;
+        $chart4->labels($product->pluck('name'));
+        $chart4->dataset('Products','doughnut',$product->pluck('price'));
+        return view('pages.admin.product-analytics',compact('chart','chart2','chart3','chart4'));
     }
 
 }
