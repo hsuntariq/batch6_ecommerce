@@ -1,5 +1,6 @@
 <x-layout>    
     <x-nav/>
+    <x-flash-top/>
     <x-slider/>
     <div class="row m-auto container">
         @foreach ($products as $item)

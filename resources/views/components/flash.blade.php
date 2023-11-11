@@ -7,7 +7,8 @@
         inset: 0;
     }
     .dialog-box{
-        position: absolute;
+        /* z-index: 300 */
+        position: absolute !important;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -35,10 +36,10 @@
         underlay.style.display = "none"
     })
     
-    setTimeout(()=>{
-        box.style.display = "none"
-        underlay.style.display = "none"
-    },5000)
+    // setTimeout(()=>{
+    //     box.style.display = "none"
+    //     underlay.style.display = "none"
+    // },5000)
 
 </script>
 

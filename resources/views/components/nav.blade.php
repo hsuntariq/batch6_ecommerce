@@ -35,12 +35,15 @@
         <li class="nav-item">
           <a class="text-white nav-link" aria-current="page" href="#">Home</a>
         </li>
+        @guest
+            
         <li class="nav-item">
           <a class="text-white nav-link" href="#">Sign Up</a>
         </li>
         <li class="nav-item">
           <a class="text-white nav-link" href="#">Sign In</a>
         </li>
+        @endguest
         <li class="nav-item">
           <a class="text-white nav-link" href="">Add Products</a>
         </li>
@@ -64,7 +67,14 @@
             <li><a class="text-white dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        
+        @auth
+        <li class="nav-item">
+          <form action="/logout" method="POST">
+            @csrf
+            <button class="btn btn-danger" href="#">Logout</button>
+          </form>
+        </li>
+        @endauth
       </ul>
     </div>
   </div>
