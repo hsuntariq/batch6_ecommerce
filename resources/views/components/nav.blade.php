@@ -54,7 +54,7 @@
           <div class="number">
             0
           </div>
-          <a class="text-white nav-link" href="#"><i class="bi bi-cart3 fs-5"></i></a>
+          <a class="text-white nav-link" href="/cart"><i class="bi bi-cart3 fs-5"></i></a>
         </li>
         <li class="nav-item dropdown">
           <a class="text-white nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
