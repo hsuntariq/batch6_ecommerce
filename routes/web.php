@@ -33,6 +33,8 @@ Route::view('/product-analytics','pages.admin.product-analytics');
 Route::view('/register','pages.user.register');
 Route::view('/cart','pages.user.cart')->middleware('auth');
 Route::view('/login','pages.user.login')->name('login');
+Route::view('/add-admin','pages.admin.add-admin')->middleware(['auth','super']);
+Route::view('/buy-now','pages.user.buy-now')->middleware('auth');
 
 
 Route::post('/insert-product',[productController::class,'insertProduct']);
@@ -42,6 +44,7 @@ Route::post('/logout',[userController::class,'SignOut']);
 Route::post('/login',[userController::class,'SignIn']);
 Route::post('/add-to-cart',[cartController::class,'addToCart']);
 Route::post('delete-item-cart/{id}',[cartController::class,'deleteCartItem']);
+Route::post('/insert-admin',[userController::class,'addNewAdmin'])->middleware(['auth','super']);
 
 
 Route::get('/',[productController::class,'getProducts']);

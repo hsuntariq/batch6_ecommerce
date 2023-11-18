@@ -48,6 +48,22 @@ class userController extends Controller
 
     }
 
+    public function addNewAdmin(Request $req){
+        $formFields = $req->validate([
+            "username" => ['required','min:3'],
+            "email" => ['required'],
+            "password" => ['required','min:6'],
+            "role" => ['required'],
+        ]);
+
+        $formFields['password'] = bcrypt($formFields['password']);
+
+        User::create($formFields);
+        return back()->with('success','Admin Added Successfully!');
+
+
+    }
+
 
 
 

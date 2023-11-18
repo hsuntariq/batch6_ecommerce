@@ -36,6 +36,12 @@
         <div class="icon"><i class="me-3 bi bi-pencil-square"></i></div>
         <div class="text">Update Order</div>
     </a>
+    @can('isSuper')
+    <a href="" class="fs-2 d-flex nav-link">
+        <div class="icon"><i class="me-3 bi bi-person"></i></div>
+        <div class="text">Add Admin</div>
+    </a>
+    @endcan
     
     <div class="dropdown">
         <div class="dropdown-toggle fs-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">

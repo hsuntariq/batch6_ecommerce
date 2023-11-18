@@ -32,6 +32,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        @auth
+        <li class="nav-item">
+          <a class="text-white nav-link" aria-current="page" href="#">
+            Hello {{auth()->user()->username}}
+          </a>
+        </li>
+        @endauth
         <li class="nav-item">
           <a class="text-white nav-link" aria-current="page" href="#">Home</a>
         </li>
@@ -44,12 +51,14 @@
           <a class="text-white nav-link" href="#">Sign In</a>
         </li>
         @endguest
+        @can('isAdmin')
         <li class="nav-item">
           <a class="text-white nav-link" href="">Add Products</a>
         </li>
         <li class="nav-item">
           <a class="text-white nav-link" href="#">Add Categories</a>
         </li>
+        @endcan
         <li class="nav-item">
           <div class="number">
             0

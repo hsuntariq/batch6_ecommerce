@@ -9,7 +9,7 @@ class cartController extends Controller
 {
     public function addToCart(Request $req){
         if($req->input('action') == 'buy'){
-            echo "buy";
+            return redirect('/buy-now');
         }else{
            $_id = auth()->user()->id; 
            $formFields = [
