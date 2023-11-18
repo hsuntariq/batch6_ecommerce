@@ -2,6 +2,7 @@
     <x-nav/>
     <div class="col-lg-5 m-auto p-4 shadow">
         <form action="/buy-now" method="POST">
+            @csrf
             <h4 class="display-4 text-center">
                 Enter your details
             </h4>

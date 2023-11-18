@@ -24,7 +24,7 @@
         <div class="icon"><i class="me-3 bi bi-bookmark-star"></i></div>
         <div class="text">Add Category</div>
     </a>
-    <a href="" class="fs-2 d-flex nav-link">
+    <a href="/add-admin" class="fs-2 d-flex nav-link">
         <div class="icon"><i class="me-3 bi bi-person"></i></div>
         <div class="text">Add Admins</div>
     </a>
@@ -32,7 +32,7 @@
         <div class="icon"><i class="me-3 bi bi-people"></i></div>
         <div class="text">View Users</div>
     </a>
-    <a href="" class="fs-2 d-flex nav-link">
+    <a href="/order" class="fs-2 d-flex nav-link">
         <div class="icon"><i class="me-3 bi bi-pencil-square"></i></div>
         <div class="text">Update Order</div>
     </a>

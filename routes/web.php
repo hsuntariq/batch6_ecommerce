@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\cartController;
 use App\Http\Controllers\categoryController;
+use App\Http\Controllers\orderController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,7 @@ Route::view('/cart','pages.user.cart')->middleware('auth');
 Route::view('/login','pages.user.login')->name('login');
 Route::view('/add-admin','pages.admin.add-admin')->middleware(['auth','super']);
 Route::view('/buy-now','pages.user.buy-now')->middleware('auth');
+Route::view('/order','pages.admin.orders');
 
 
 Route::post('/insert-product',[productController::class,'insertProduct']);
@@ -45,6 +47,7 @@ Route::post('/login',[userController::class,'SignIn']);
 Route::post('/add-to-cart',[cartController::class,'addToCart']);
 Route::post('delete-item-cart/{id}',[cartController::class,'deleteCartItem']);
 Route::post('/insert-admin',[userController::class,'addNewAdmin'])->middleware(['auth','super']);
+Route::post('buy-now',[orderController::class,'postOrder']);
 
 
 Route::get('/',[productController::class,'getProducts']);
@@ -52,3 +55,4 @@ Route::get('/single/{id}',[productController::class,'findProduct'])->middleware(
 Route::get('/add-product',[categoryController::class,'getCategory'])->middleware(['auth','admin']);
 Route::get('/product-analytics',[productController::class,'productGraph']);
 Route::get('/cart',[cartController::class,'getUserCart'])->middleware('auth');
+Route::get('/order',[orderController::class,'getOrders']);
